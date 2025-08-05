@@ -32,10 +32,16 @@
 		if(savedCart == null) {
 			out.println("장바구니가 비어있습니다.");
 		} else {
-			out.println(savedCart); // 상품 목록 출력
+//			out.println(savedCart); // 상품 목록 출력
+			String[] carts = savedCart.split("/"); //  "/"를 기준으로 문자열을 분리 -> 문자열 배열
+			for(String cart : carts){
+				out.println("* "+ cart + "<br>");
+			}
 		}
 		
 		%>
+		
+		<a href="removeCart.jsp">장바구니 비우기</a>
 		
 	</body>
 	
