@@ -21,7 +21,7 @@
 			
 			for(Cookie cookie : cookies) {
 				String cValue = cookie.getValue(); // 쿠키의 값 가져오기
-				
+				cookie.setMaxAge(60);
 				if (cValue.equals("tiger")){
 					out.println("[" + cValue + "]님 어서오세요");	
 				}
